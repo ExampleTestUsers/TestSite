@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>My Spot</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="Marketing website for My Spot - Exploration on that AppStore. Gives description of app, features, technology used, and privacy policy.">
+  		<meta name="keywords" content="Isaac, Paschall, Software Engineer, ios developer, swift, swiftui, uikit, my spot, my spot exploration, app, watch app, appclip, find spots, spots near me, save spots">
+  		<meta name="author" content="Isaac Paschall">
+		<meta name="apple-itunes-app" content="app-id=1613618373">
+		<meta property="og:title" content="My Spot" />
+		<meta property="og:image" content="https://www.myspotexploration.com/images/MySpotAppClip.jpg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover" />
+		<link rel="shortcut icon" type="image/x-icon" href="images/myspotIcon.ico" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	</head>
+	<body onload="checkForSubmission();" class="container" id="background">
+
+		<!-- HEADER -->
+		<header id="header">
+			<span class="logo"><img src="images/logo.svg" class="filter-red" /></span>
+			<h1><a href="https://apps.apple.com/us/app/my-spot-exploration/id1613618373" style="text-decoration: none; color: whitesmoke;" target="_blank">My Spot</a></h1>
+			<p>Explore The World<br />
+			iOS, iPadOS, macOS, and WatchOS</p>
+		</header>
+
+		<!-- MAIN CONTENT -->
+		<div class="content">
+			<nav class="topnav">
+				<ul>
+					<li><a href="index" class="selected">Home</a></li>
+					<li><a href="features">Features</a></li>
+					<li><a href="technology">Technology</a></li>
+					<li><a href="privacy">Privacy</a></li>
+				</ul>
+			</nav>
+			<div class="horizontalscrollnav">
+				<a href="#what">What?</a>
+				<a href="#why">Why?</a>
+				<a href="#how">How?</a>
+				<a href="#contact">Contact</a>
+			</div>
+
+			<!-- What is My Spot-->
+			<div class="point" id="what">
+				<h2>What is My Spot</h2>
+				<p>My Spot is a social media app centered around locations. My Spot allows you to find and share spots that have yet to be explored. Create, like and share spots with friends. Spots you create are backed up to the cloud and sync up with all of your devices. Discover new spots in your area and explore the world! Download or post a comment on your favorite spots to start a conversation with the founder. Subscribe to your favorite My Spot users and get notified when they post a new spot. Build custom playlists with friends or hop on a FaceTime call to vote on a spot to visit! For more info on the powerful feature set of My Spot, please visit <a href="features">Features</a>.</p>
+			</div>
+			
+			<!-- Why My Spot-->
+			<div class="point" id="why">
+				<h2>Why My Spot</h2>
+				<p>As a skater, I found it difficult to find spots in my area to skate at. No skateparks are near me and it was nearly impossible to simply Google skating spots. I also found it difficult to find decent cliff jumping spots at my local lake. This is why I created My Spot. You may be a hiker, mountain climber, bird watcher, mountain biker, etc. or all the above. My Spot will help you find exactly what you are looking for. Even if you are just someone looking for a quiet place to watch the sunset, My Spot is for you!</p>
+			</div>
+
+			<!-- How My Spot-->
+			<div class="point" id="how">
+				<h2>How My Spot is Made</h2>
+				<p>My Name is Isaac Paschall and I am the creator of My Spot. I started My Spot in January of 2022 as a Sophomore at Arizona State University. Coding was a passion of mine and I really wanted to get into mobile development. As I owned mainly IOS devices, I decided to begin teaching myself how to build IOS apps by creating small demos. One demo I created was called My Spot that solved a real issue I was facing. My friends began using it more and I realized it had potential but at the time it was not scalable beyond 100 or so users. The app needed some serious reafactoring to be able to release it to real users on the AppStore. I also needed a solution for the steep prices of running a backend server. Firebase was my first option but I was a broke college student who needed something completely free with no paid tiers but also scalable. Pretty hard to find a service like that but luckily CloudKit came to my rescue. I was also able to use Netlify to create a company website for free as well. Now my grand total to run My Spot to potentially 100,000+ users was $12/year and this was for domain fees. If you would like to see what I'm up to currently for have any questions please see <a href="#contact">Contact</a>.</p>
+			</div>
+
+			<!-- Contact-->
+			<div class="pointform" id="contact">
+				<h2>Contact Me</h2>
+				<p>I would love to hear any thoughts, suggestions, or inquiries! Please either fill out this form and submit or <a href="mailto: iwp2358@gmail.com">email me</a>.</p>
+				<form name="Contact Me" class="form" id="form" action="/index#contact" netlify>
+					<div class="form__item">
+					  <label for="name" class="form__label">Name</label>
+					  <input type="text" class="form__input" name="name" id="name" placeholder="Name"/>
+					</div>
+					<div class="form__item">
+						<label for="contact__form" class="form__label">Contact Info</label>
+						<input type="email" class="form__input" name="contact__form" id="contact__form" placeholder="Email"/>
+					</div>
+					<div class="form__item">
+						  <label for="message" class="form__label">Message</label>
+					  	<textarea maxlength="1000" class="form__input" name="message" id="message" placeholder="1000 Characters or less" required></textarea>
+					</div>
+					<div class="form__item">
+						<button id="submitbtn" class="form__btn" type="submit" >Send</button>
+					</div>
+				</form>
+				<h3 id="onSubmitText">🥳 Message Sent!</h3>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<h2>Contact Me</h2>
+			<p>
+				Email Me: <a href="mailto: iwp2358@gmail.com">iwp2358@gmail.com</a></dt>
+				<br/><br/>
+				Personal Website: <a href="https://isaacpasc.github.io" target="_blank">isaacpasc.github.io</a>
+			</p>
+		</footer>
+
+		<script>
+			function checkForSubmission() {
+				let currURL = document.location.href;
+				if (currURL.includes('index')) {
+					var submitText = document.getElementById('onSubmitText');
+					var form = document.getElementById('form');
+					form.style.display = 'none';
+					submitText.style.display = 'block';
+				}
+			}
+		</script>
+	</body>
+</html>
